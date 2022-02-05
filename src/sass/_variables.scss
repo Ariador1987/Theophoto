@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --clr-primary: #ffb900;
+    --clr-primary-dark: #ff7730;
+
+    --clr-secondary: hsl(209, 63%, 75%);
+    --clr-secondary-light: hsl(209, 84%, 56%);
+    --clr-secondary-dark: #5643fa;
+
+    --clr-tertiary: hsl(32, 70%, 24%);
+    --clr-tertiary-dark: hsl(348, 36%, 34%);
+
+    --clr-accent: hsl(272, 76%, 53%);
+    --clr-accent-light: hsl(272, 83%, 64%);
+    --clr-accent-dark: hsl(260, 100%, 44%);
+
+    --clr-grey-light-1: hsl(0, 0%, 97%);
+    --clr-grey-light-2: hsl(0, 0%, 93%);
+    --clr-grey-light-3: hsl(0, 0%, 88%);
+    --clr-grey-light-4: hsl(0, 0%, 82%);
+
+    --clr-grey-dark: hsl(0, 0%, 47%);
+    --clr-grey-dark-2: hsl(0, 0%, 60%);
+    --clr-grey-dark-3: hsl(0, 0%, 27%);
+
+    --website-width: 120rem;
+
+    --ff-header: "Montserrat", sans-serif;
+    --ff-body: "Merriweather Sans", sans-serif;
+}
+
+$gradient-primary: linear-gradient(to right bottom, #ffaa85, #b3315f);
+$gradient-cta: linear-gradient(to right, #684012, #5a3306);
+$bxsh-dark: 2px 2px 4px 2px var(--clr-box-sh-dark);
+$bxsh-dark-hover: 3px 3px 6px 3px var(--clr-box-sh-dark);

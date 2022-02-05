@@ -1,0 +1,213 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: #fff;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 4rem;
+        right: 6.5rem;
+        border-radius: 50%;
+        z-index: 105;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover .navigation__icon::before {
+            top: -1.2rem;
+        }
+        &:hover .navigation__icon::after {
+            top: 1.2rem;
+        }
+
+        @include respond(tab-land) {
+            top: 3.5rem;
+            right: 5.5rem;
+        }
+
+        @include respond(phone) {
+            top: 2.8rem;
+            right: 2.8rem;
+        }
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background-color: lightblue;
+        position: fixed;
+        top: 4.5rem;
+        right: 7rem;
+        background-image: radial-gradient(#cc2b5e 0%, #753a88 100%);
+        z-index: 100;
+
+        @include respond(tab-land) {
+            top: 4.5rem;
+            right: 6rem;
+        }
+
+        @include respond(phone) {
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+
+        transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &__nav {
+        height: 100vh;
+        // width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 101;
+
+        opacity: 0;
+        width: 0;
+
+        transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &__list {
+        @include posAbsCenter;
+        list-style-type: none;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__item {
+        margin: 3rem;
+
+        @include respond(phone) {
+            margin: 4.5rem;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        letter-spacing: 3px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.4s ease;
+        border-radius: 10rem;
+
+        @include respond(tab-port) {
+            font-size: 3.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+
+        &:hover,
+        &:active {
+            background: linear-gradient(
+                to right,
+                var(--clr-accent),
+                var(--clr-accent-dark)
+            );
+        }
+    }
+
+    // hamburger lines
+    &__icon {
+        position: relative;
+        text-align: center;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3px;
+            display: inline-block;
+            background-color: var(--clr-grey-dark-3);
+            transition: all 0.1s;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
+    }
+
+    // social inside of the menu
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            padding: 0 1.5rem;
+
+            i {
+                color: #fff;
+                transition: 0.3s ease;
+            }
+
+            i.insta {
+                &:hover,
+                &:active {
+                    color: #f77737;
+                }
+            }
+
+            i.face {
+                &:hover,
+                &:active {
+                    color: hsl(204, 80%, 63%);
+                }
+            }
+
+            i.whatsapp {
+                &:hover,
+                &:active {
+                    color: #25d366;
+                }
+            }
+        }
+    }
+
+    &__checkbox:checked ~ .navigation__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ .navigation__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background: $gradient-primary no-repeat;
+    color: #000;
+    font-family: var(--ff-body);
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.2;
+}
+
+// Section Headings
+section {
+    padding: 2.5rem 2.5rem 5.5rem;
+}
+
+.section-heading {
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 3rem 0 1.5rem;
+    text-transform: uppercase;
+
+    @include respond(phone) {
+        font-size: 6rem;
+    }
+}
+
+.section-span {
+    color: var(--clr-accent);
+    font-weight: 600;
+}

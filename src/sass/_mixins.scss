@@ -1,0 +1,43 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin posAbsCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin respond($device) {
+    @if $device == phone {
+        @media only screen and (max-width: 37.5em) {
+            // design broke at 608px so i cheat a bit :-)
+            // 600px (37.5 x 16)
+            @content;
+        }
+    }
+
+    @if $device == tab-port {
+        @media only screen and (max-width: 56.25em) {
+            // 900px
+            @content;
+        }
+    }
+
+    @if $device == tab-land {
+        @media only screen and (max-width: 75em) {
+            // 1200px
+            @content;
+        }
+    }
+
+    @if $device == xxl-desktop {
+        @media only screen and (min-width: 112.5em) {
+            // 1800px
+            @content;
+        }
+    }
+}
