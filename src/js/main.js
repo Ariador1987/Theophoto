@@ -1,4 +1,6 @@
 import "./components/navbar.js";
+import "./components/counter.js";
+import "./components/slider.js";
 import TypeWriter from "./components/typewriter.js";
 
 const btnAboutEl = document.querySelector(".btn--cta");

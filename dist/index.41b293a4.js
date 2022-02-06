@@ -461,6 +461,8 @@ function hmrAcceptRun(bundle, id) {
 },{}],"iWSTb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _navbarJs = require("./components/navbar.js");
+var _counterJs = require("./components/counter.js");
+var _sliderJs = require("./components/slider.js");
 var _typewriterJs = require("./components/typewriter.js");
 var _typewriterJsDefault = parcelHelpers.interopDefault(_typewriterJs);
 const btnAboutEl = document.querySelector(".btn--cta");
@@ -479,7 +481,66 @@ btnAboutEl.addEventListener("click", ()=>{
 });
 document.addEventListener("DOMContentLoaded", init);
 
-},{"./components/navbar.js":"iKOvc","./components/typewriter.js":"418nu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"iKOvc":[function(require,module,exports) {
+},{"./components/navbar.js":"iKOvc","./components/counter.js":"A1CWI","./components/slider.js":"k1Pry","./components/typewriter.js":"418nu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"iKOvc":[function(require,module,exports) {
+
+},{}],"A1CWI":[function(require,module,exports) {
+const counters = document.querySelectorAll(".counter__item--number");
+const counterEl = document.querySelector(".counter");
+let wasCounted = false;
+const obsCb = (entries, observer)=>{
+    const [entry] = entries;
+    if (entry.isIntersecting && !wasCounted) {
+        startCounting();
+        observer.disconnect();
+    }
+};
+const obsOptions = {
+    root: null,
+    threshold: 0.43
+};
+const observer1 = new IntersectionObserver(obsCb, obsOptions);
+observer1.observe(counterEl);
+const startCounting = ()=>{
+    counters.forEach((counter)=>{
+        counter.textContent = "0";
+        const updateCounter = ()=>{
+            const target = +counter.getAttribute("data-target");
+            const c = +counter.textContent;
+            const increment = target / 1000;
+            if (c < target) {
+                counter.textContent = `${Math.ceil(c + increment)}`;
+                setTimeout(updateCounter, 1);
+            } else counter.textContent = target + "+";
+        };
+        updateCounter();
+        wasCounted = true;
+    });
+};
+
+},{}],"k1Pry":[function(require,module,exports) {
+const slides = document.querySelectorAll(".slide");
+btnLeftEl = document.querySelector(".slider__btn--left");
+btnRightEl = document.querySelector(".slider__btn--right");
+let currentSlide = 0;
+const maxSlide = slides.length;
+const goToSlide = (currSlide)=>{
+    slides.forEach((slide, idx)=>{
+        slide.style.transform = `translateX(${100 * (idx - currSlide)}%)`;
+    });
+};
+const nextSlide = ()=>{
+    if (currentSlide === maxSlide - 1) currentSlide = 0;
+    else currentSlide++;
+    goToSlide(currentSlide);
+};
+const previousSlide = ()=>{
+    currentSlide--;
+    if (currentSlide < 0) currentSlide = maxSlide - 1;
+    goToSlide(currentSlide);
+};
+btnRightEl.addEventListener("click", nextSlide);
+btnLeftEl.addEventListener("click", previousSlide);
+goToSlide(0);
 
 },{}],"418nu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

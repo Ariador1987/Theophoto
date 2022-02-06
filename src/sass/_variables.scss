@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 :root {
     --clr-primary: #ffb900;
@@ -24,13 +26,22 @@
     --clr-grey-dark-2: hsl(0, 0%, 60%);
     --clr-grey-dark-3: hsl(0, 0%, 27%);
 
+    --clr-gradient-1: hsl(205, 88%, 63%);
+    --clr-gradient-2: hsl(205, 88%, 43%);
+
     --website-width: 120rem;
 
     --ff-header: "Montserrat", sans-serif;
     --ff-body: "Merriweather Sans", sans-serif;
+    --ff-vibes: "Great Vibes", cursive;
 }
 
-$gradient-primary: linear-gradient(to right bottom, #ffaa85, #b3315f);
+$counter-font-family: "Roboto Mono", sans-serif;
+$gradient-primary: linear-gradient(
+    to right bottom,
+    var(--clr-gradient-1),
+    var(--clr-gradient-2)
+);
 $gradient-cta: linear-gradient(to right, #684012, #5a3306);
 $bxsh-dark: 2px 2px 4px 2px var(--clr-box-sh-dark);
 $bxsh-dark-hover: 3px 3px 6px 3px var(--clr-box-sh-dark);

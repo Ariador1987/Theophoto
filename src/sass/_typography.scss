@@ -3,7 +3,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     background: $gradient-primary no-repeat;
-    color: #000;
+    color: #333;
     font-family: var(--ff-body);
 
     @include respond(phone) {
@@ -29,25 +29,41 @@ h6 {
     line-height: 1.2;
 }
 
-// Section Headings
+// Section
 section {
     padding: 2.5rem 2.5rem 5.5rem;
 }
 
-.section-heading {
-    font-size: 4.5rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-align: center;
-    padding: 3rem 0 1.5rem;
-    text-transform: uppercase;
+.section {
+    &-heading {
+        font-size: 4.5rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 3rem 0 1.5rem;
+        text-transform: uppercase;
 
-    @include respond(phone) {
-        font-size: 6rem;
+        @include respond(phone) {
+            font-size: 6rem;
+        }
     }
-}
 
-.section-span {
-    color: var(--clr-accent);
-    font-weight: 600;
+    &-span {
+        color: var(--clr-accent);
+        font-weight: 600;
+    }
+
+    &--gallery {
+        font-weight: 700;
+        letter-spacing: 2.4px;
+        margin: 0 auto;
+        background: linear-gradient(
+            to right,
+            var(--clr-secondary-light) 35%,
+            var(--clr-accent-dark)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 }
