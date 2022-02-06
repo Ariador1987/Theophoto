@@ -1,0 +1,62 @@
+.counter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center;
+    align-content: center;
+
+    @include respond(tab-land) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.25rem 3rem;
+
+        @include respond(tab-land) {
+            &:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        &--heading {
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 400;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: var(--clr-accent);
+        }
+
+        .icon-container {
+            height: 16rem;
+            width: 16rem;
+            background-color: var(--clr-secondary-light);
+            border-radius: 50%;
+            @include flexCenter;
+            margin-bottom: 3.5rem;
+        }
+
+        i {
+            padding: 3.5rem;
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        &--number {
+            font-family: $counter-font-family;
+            font-size: 5.25rem;
+            font-weight: 900;
+            color: var(--clr-primary);
+            letter-spacing: 2px;
+        }
+    }
+}
