@@ -1,7 +1,7 @@
 .btn {
     display: inline-block;
     cursor: pointer;
-    padding: 1.5rem 2.25rem;
+    padding: 1.75rem 2.5rem;
     border-radius: 10rem;
     text-align: center;
     letter-spacing: 1.1px;
@@ -16,7 +16,7 @@
     }
 
     &:active {
-        transform: translateY(-1px);
+        transform: translateY(1px);
     }
 
     @include respond(phone) {
@@ -25,13 +25,21 @@
 
     &--gallery {
         display: block;
+        margin: 4.2rem auto 0;
         background: var(--clr-secondary-light);
         border: 1px solid var(--clr-primary);
         color: #fff;
         box-shadow: 4px 4px 10px 6px var(--clr-grey-light-4);
 
+        // visibility and opacity manipulated in animations
+        visibility: hidden;
+
         &:hover {
             box-shadow: 6px 6px 10px 6px var(--clr-grey-light-4);
+        }
+
+        &:active {
+            box-shadow: 2px 2px 5px 3px var(--clr-grey-light-4);
         }
     }
 
@@ -44,6 +52,30 @@
 
         @include respond(phone) {
             font-size: 3.75rem;
+        }
+    }
+
+    &--animated {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10rem;
+            background-color: inherit;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+
+        &:hover::after,
+        &:focus::after {
+            transform: scaleX(1.5) scaleY(1.4);
+            opacity: 0;
         }
     }
 }

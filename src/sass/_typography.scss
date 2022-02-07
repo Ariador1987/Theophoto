@@ -12,7 +12,11 @@ body {
 }
 
 a {
-    text-decoration: none;
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 ul {
@@ -49,7 +53,7 @@ section {
     }
 
     &-span {
-        color: var(--clr-accent);
+        color: var(--clr-primary);
         font-weight: 600;
     }
 
@@ -59,11 +63,22 @@ section {
         margin: 0 auto;
         background: linear-gradient(
             to right,
-            var(--clr-secondary-light) 35%,
+            var(--clr-secondary-light) 20%,
             var(--clr-accent-dark)
         );
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+
+        @include respond(phone) {
+            background: linear-gradient(
+                to right,
+                var(--clr-secondary-light) 35%,
+                var(--clr-accent-dark)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
     }
 }

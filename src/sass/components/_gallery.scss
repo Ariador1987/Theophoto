@@ -8,6 +8,7 @@
     margin: 0 auto;
     position: relative;
     border-radius: 8px;
+    box-shadow: 4px 4px 8px 3px var(--clr-grey-light-4);
 
     /* IN THE END */
     overflow: hidden;
@@ -29,6 +30,31 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: all 0.4s;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.02);
+                filter: saturate(125%);
+
+                ~ .slide__figcaption {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &__figcaption {
+            font-size: 1.4rem;
+            font-weight: 600;
+            font-style: italic;
+            color: #fff;
+            position: absolute;
+            top: 6%;
+            letter-spacing: 1.5px;
+            visibility: visible;
+            opacity: 1;
+            transition: 1.1s ease;
         }
     }
 
@@ -39,7 +65,7 @@
 
         border: none;
         background: var(--clr-grey-light-2);
-        opacity: 0.8;
+        opacity: 0.6;
         font-family: inherit;
         color: #333;
         border-radius: 50%;

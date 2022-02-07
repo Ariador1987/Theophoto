@@ -467,6 +467,22 @@ var _typewriterJs = require("./components/typewriter.js");
 var _typewriterJsDefault = parcelHelpers.interopDefault(_typewriterJs);
 const btnAboutEl = document.querySelector(".btn--cta");
 const aboutEl = document.querySelector(".about");
+const gallerySectionEl = document.querySelector(".gallery");
+const btnAnimatedEl = document.querySelector(".btn--animated");
+// animate gallery button
+const obsOptions = {
+    root: null,
+    threshold: 0.75
+};
+const obsCb = (entries, obs)=>{
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+        btnAnimatedEl.classList.add("animate-button");
+        obs.disconnect();
+    }
+};
+const btnObs = new IntersectionObserver(obsCb, obsOptions);
+btnObs.observe(gallerySectionEl);
 function init() {
     const txtElement = document.querySelector(".txt-type");
     const words = JSON.parse(txtElement.getAttribute("data-words"));
@@ -496,7 +512,7 @@ const obsCb = (entries, observer)=>{
 };
 const obsOptions = {
     root: null,
-    threshold: 0.43
+    threshold: 0.5
 };
 const observer1 = new IntersectionObserver(obsCb, obsOptions);
 observer1.observe(counterEl);
@@ -581,7 +597,7 @@ class TypeWriter {
             // Move to next word
             this.wordIndex++;
             // Pause before start typing
-            typeSpeed = 500;
+            typeSpeed = 300;
         }
         setTimeout(()=>this.type()
         , typeSpeed);

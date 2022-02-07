@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
 :root {
   --clr-primary: #ffb900;
   --clr-primary-dark: #ff7730;
@@ -24,7 +23,6 @@
   --website-width: 120rem;
   --ff-header: "Montserrat", sans-serif;
   --ff-body: "Merriweather Sans", sans-serif;
-  --ff-vibes: "Great Vibes", cursive;
 }
 body {
   font-size: 1.6rem;
@@ -39,7 +37,7 @@ body {
     font-size: 2rem;
   }
 }
-a {
+a, a:link, a:visited {
   text-decoration: none;
 }
 ul {
@@ -71,22 +69,30 @@ section {
   }
 }
 .section-span {
-  color: var(--clr-accent);
+  color: var(--clr-primary);
   font-weight: 600;
 }
 .section--gallery {
   font-weight: 700;
   letter-spacing: 2.4px;
   margin: 0 auto;
-  background: linear-gradient(to right, var(--clr-secondary-light) 35%, var(--clr-accent-dark));
+  background: linear-gradient(to right, var(--clr-secondary-light) 20%, var(--clr-accent-dark));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+@media only screen and (max-width: 37.5em) {
+  .section--gallery {
+    background: linear-gradient(to right, var(--clr-secondary-light) 35%, var(--clr-accent-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
 .btn {
   display: inline-block;
   cursor: pointer;
-  padding: 1.5rem 2.25rem;
+  padding: 1.75rem 2.5rem;
   border-radius: 10rem;
   text-align: center;
   letter-spacing: 1.1px;
@@ -100,7 +106,7 @@ section {
   transform: translateY(-3px);
 }
 .btn:active {
-  transform: translateY(-1px);
+  transform: translateY(1px);
 }
 @media only screen and (max-width: 37.5em) {
   .btn {
@@ -109,13 +115,18 @@ section {
 }
 .btn--gallery {
   display: block;
+  margin: 4.2rem auto 0;
   background: var(--clr-secondary-light);
   border: 1px solid var(--clr-primary);
   color: #fff;
   box-shadow: 4px 4px 10px 6px var(--clr-grey-light-4);
+  visibility: hidden;
 }
 .btn--gallery:hover {
   box-shadow: 6px 6px 10px 6px var(--clr-grey-light-4);
+}
+.btn--gallery:active {
+  box-shadow: 2px 2px 5px 3px var(--clr-grey-light-4);
 }
 .btn--cta {
   display: block;
@@ -128,6 +139,26 @@ section {
   .btn--cta {
     font-size: 3.75rem;
   }
+}
+.btn--animated {
+  position: relative;
+}
+.btn--animated::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10rem;
+  background-color: inherit;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--animated:hover::after, .btn--animated:focus::after {
+  transform: scaleX(1.5) scaleY(1.4);
+  opacity: 0;
 }
 .line {
   height: 3px;
@@ -184,6 +215,26 @@ p {
   p {
     font-size: 2.1rem;
   }
+}
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-button {
+  animation: fadeInButton;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+  visibility: visible;
 }
 .container {
   max-width: var(--website-width);
@@ -506,7 +557,7 @@ p {
 }
 .clients-services__reviews {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-around;
   gap: 2.75rem;
   margin-bottom: 6rem;
@@ -514,6 +565,7 @@ p {
 @media only screen and (max-width: 56.25em) {
   .clients-services__reviews {
     flex-direction: column;
+    align-items: center;
   }
 }
 .clients-services .review {
@@ -612,7 +664,7 @@ p {
 .counter__item--heading {
   text-align: center;
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 2.2px;
   text-transform: uppercase;
   color: var(--clr-accent);
@@ -648,6 +700,7 @@ p {
   margin: 0 auto;
   position: relative;
   border-radius: 8px;
+  box-shadow: 4px 4px 8px 3px var(--clr-grey-light-4);
   /* IN THE END */
   overflow: hidden;
 }
@@ -666,6 +719,27 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.4s;
+}
+.slider .slide > img:hover, .slider .slide > img:focus {
+  transform: scale(1.02);
+  filter: saturate(125%);
+}
+.slider .slide > img:hover ~ .slide__figcaption, .slider .slide > img:focus ~ .slide__figcaption {
+  opacity: 0;
+  visibility: hidden;
+}
+.slider .slide__figcaption {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #fff;
+  position: absolute;
+  top: 6%;
+  letter-spacing: 1.5px;
+  visibility: visible;
+  opacity: 1;
+  transition: 1.1s ease;
 }
 .slider__btn {
   position: absolute;
@@ -673,7 +747,7 @@ p {
   z-index: 10;
   border: none;
   background: var(--clr-grey-light-2);
-  opacity: 0.8;
+  opacity: 0.6;
   font-family: inherit;
   color: #333;
   border-radius: 50%;
