@@ -9,6 +9,31 @@ const aboutEl = document.querySelector(".about");
 const gallerySectionEl = document.querySelector(".gallery");
 const btnAnimatedEl = document.querySelector(".btn--animated");
 
+const clientsSectionEl = document.getElementById("clientsServices");
+const btnGoToClientsEl = document.getElementById("clientsBtn");
+
+const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
+// linkEntireGalleryEl.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const clicked = e.target.closest(".btn--gallery");
+//     if (!clicked) return;
+
+//     console.log(clicked);
+// });
+
+// Mislim da je ovo dobar pristup
+// linkEntireGalleryEl.closest(".btn--gallery").addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const link = linkEntireGalleryEl.href;
+//     window.location = link;
+//     window.location.reload();
+// });
+
+btnGoToClientsEl.addEventListener("click", (e) => {
+    e.preventDefault();
+    clientsSectionEl.scrollIntoView({ behavior: "smooth" });
+});
+
 // animate gallery button
 const obsOptions = { root: null, threshold: 0.75 };
 const obsCb = (entries, obs) => {

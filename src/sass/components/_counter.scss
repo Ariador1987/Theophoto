@@ -36,14 +36,14 @@
             color: var(--clr-accent);
         }
 
-        .icon-container {
-            height: 16rem;
-            width: 16rem;
-            background-color: var(--clr-secondary-light);
-            border-radius: 50%;
-            @include flexCenter;
-            margin-bottom: 3.5rem;
-        }
+        // .icon-container {
+        //     height: 16rem;
+        //     width: 16rem;
+        //     background-color: var(--clr-secondary-light);
+        //     border-radius: 50%;
+        //     @include flexCenter;
+        //     margin-bottom: 3.5rem;
+        // }
 
         i {
             padding: 3.5rem;

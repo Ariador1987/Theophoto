@@ -1,0 +1,42 @@
+.contact {
+    // background-color: var(--clr-grey-dark-3);
+    background-color: var(--clr-grey-dark-4);
+    color: #fff;
+
+    &__slogan {
+        margin-top: 3rem;
+        width: 100%;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 3.8rem;
+        font-weight: 300;
+        letter-spacing: 1.1px;
+        color: var(--clr-primary);
+        margin-bottom: 4rem;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 80rem;
+        margin: 0 auto;
+
+        // span {
+        //     transition: 0.8s ease;
+
+        //     &:hover,
+        //     &:active {
+        //         i.fa-instagram {
+        //             color: #f77737;
+        //         }
+        //         i.fa-whatsapp {
+        //             color: #25d366;
+        //         }
+        //         i.fa-envelope {
+        //             color: var(--clr-secondary-light);
+        //         }
+        //     }
+        // }
+    }
+}
