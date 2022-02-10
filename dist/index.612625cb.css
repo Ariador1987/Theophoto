@@ -19,8 +19,8 @@
   --clr-grey-dark-2: hsl(0, 0%, 60%);
   --clr-grey-dark-3: hsl(0, 0%, 20%);
   --clr-grey-dark-4: hsl(0, 0%, 5%);
-  --clr-gradient-1: hsl(0, 0%, 27%);
-  --clr-gradient-2: hsl(0, 0%, 27%);
+  --clr-gradient-1: hsl(0, 0%, 72%);
+  --clr-gradient-2: hsl(0, 0%, 72%);
   --website-width: 120rem;
   --ff-header: "Montserrat", sans-serif;
   --ff-body: "Merriweather Sans", sans-serif;
@@ -619,7 +619,7 @@ p {
   align-items: baseline;
   justify-content: space-around;
   gap: 2.75rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
 }
 @media only screen and (max-width: 56.25em) {
   .clients-services__reviews {

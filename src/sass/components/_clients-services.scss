@@ -41,7 +41,7 @@
         align-items: baseline;
         justify-content: space-around;
         gap: 2.75rem;
-        margin-bottom: 6rem;
+        margin-bottom: 4.5rem;
 
         @include respond(tab-port) {
             flex-direction: column;
