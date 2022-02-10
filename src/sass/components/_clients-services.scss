@@ -51,10 +51,12 @@
 
     .review {
         // background-color: var(--clr-secondary-light);
-        padding: 2rem 2.75rem;
+        padding: 2.25rem 2.75rem;
         border-radius: 8px;
         border: 1px solid var(--clr-accent-light);
         background-color: #fff;
+        // vrlo upitno, vidit s teom
+        // min-height: 23rem;
 
         @include respond(phone) {
             margin: 0 2rem;

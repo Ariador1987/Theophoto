@@ -11,7 +11,7 @@ const obsCb = (entries, observer) => {
 };
 const obsOptions = {
     root: null,
-    threshold: 0.5,
+    threshold: 0.45,
 };
 
 const observer = new IntersectionObserver(obsCb, obsOptions);

@@ -30,9 +30,5 @@
         span {
             color: var(--clr-primary);
         }
-
-        @include respond(phone) {
-            font-size: 6rem;
-        }
     }
 }

@@ -512,7 +512,7 @@ const obsCb = (entries, observer)=>{
 };
 const obsOptions = {
     root: null,
-    threshold: 0.5
+    threshold: 0.45
 };
 const observer1 = new IntersectionObserver(obsCb, obsOptions);
 observer1.observe(counterEl);

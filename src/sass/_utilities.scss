@@ -1,3 +1,10 @@
+.container {
+    max-width: var(--website-width);
+    margin: 0 auto;
+    background-color: var(--clr-grey-light-1);
+    overflow: auto;
+}
+
 .btn {
     display: inline-block;
     cursor: pointer;
@@ -73,7 +80,7 @@
         }
 
         &:hover::after,
-        &:focus::after {
+        &:active::after {
             transform: scaleX(1.5) scaleY(1.4);
             opacity: 0;
         }
@@ -83,7 +90,7 @@
 .line {
     height: 3px;
     width: 8rem;
-    margin: 0 auto 2.75rem;
+    margin: 0 auto 4.5rem;
 
     @include respond(phone) {
         width: 12rem;

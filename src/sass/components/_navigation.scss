@@ -40,11 +40,14 @@
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
-        background-color: lightblue;
+        // background-color: lightblue;
         position: fixed;
         top: 4.5rem;
         right: 7rem;
-        background-image: radial-gradient(#cc2b5e 0%, #753a88 100%);
+        background: radial-gradient(
+            var(--clr-secondary-light),
+            var(--clr-secondary-dark)
+        );
         z-index: 100;
 
         @include respond(tab-land) {
@@ -94,13 +97,13 @@
         display: inline-block;
         font-size: 3rem;
         font-weight: 300;
-        padding: 1rem 2rem;
+        padding: 1.5rem 2.25rem;
         letter-spacing: 3px;
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         transition: background-color 0.4s ease;
-        border-radius: 10rem;
+        border-radius: 12px;
 
         @include respond(tab-port) {
             font-size: 3.5rem;
@@ -112,11 +115,7 @@
 
         &:hover,
         &:active {
-            background: linear-gradient(
-                to right,
-                var(--clr-accent),
-                var(--clr-accent-dark)
-            );
+            background: var(--clr-accent-dark);
         }
     }
 
