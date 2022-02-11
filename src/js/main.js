@@ -12,6 +12,10 @@ const btnAnimatedEl = document.querySelector(".btn--animated");
 const clientsSectionEl = document.getElementById("clientsServices");
 const btnGoToClientsEl = document.getElementById("clientsBtn");
 
+const footerYear = document.getElementById("footerYear");
+const date = new Date();
+footerYear.textContent = `${date.getFullYear()}`;
+
 const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
 // linkEntireGalleryEl.addEventListener("click", (e) => {
 //     e.preventDefault();

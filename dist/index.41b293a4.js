@@ -471,6 +471,9 @@ const gallerySectionEl = document.querySelector(".gallery");
 const btnAnimatedEl = document.querySelector(".btn--animated");
 const clientsSectionEl = document.getElementById("clientsServices");
 const btnGoToClientsEl = document.getElementById("clientsBtn");
+const footerYear = document.getElementById("footerYear");
+const date = new Date();
+footerYear.textContent = `${date.getFullYear()}`;
 const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
 // linkEntireGalleryEl.addEventListener("click", (e) => {
 //     e.preventDefault();
@@ -520,6 +523,27 @@ btnAboutEl.addEventListener("click", ()=>{
 document.addEventListener("DOMContentLoaded", init);
 
 },{"./components/navbar.js":"iKOvc","./components/counter.js":"A1CWI","./components/slider.js":"k1Pry","./components/typewriter.js":"418nu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"iKOvc":[function(require,module,exports) {
+// const toggleBtn = document.querySelector(".main-nav__hamburger");
+// const mainNavEl = document.querySelector(".main-nav");
+// toggleBtn.addEventListener("click", () => {
+//     mainNavEl.classList.toggle("show");
+// });
+const checkboxEl = document.getElementById("navi-toggle");
+const navLinksEl = document.querySelectorAll(".navigation__link");
+navLinksEl.forEach((link)=>{
+    link.addEventListener("click", (e)=>{
+        e.preventDefault();
+        if (checkboxEl.checked) checkboxEl.checked = false;
+        // get section to scroll to.
+        const selected = link.getAttribute("href");
+        // remove the leading # we're left with id of the section we want ot scroll to
+        const cleanSelectedLink = selected.slice(1, selected.length);
+        // scrolling the selected link into view
+        document.getElementById(cleanSelectedLink).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 
 },{}],"A1CWI":[function(require,module,exports) {
 const counters = document.querySelectorAll(".counter__item--number");

@@ -1,0 +1,25 @@
+.footer {
+    width: 100%;
+    background: var(--clr-grey-dark-4);
+    color: #fff;
+    padding: 2.25rem 0;
+
+    @include flexCenter;
+    flex-direction: column;
+
+    &__para {
+        font-size: 1.8rem;
+        color: var(--clr-accent-light);
+        // color: #fff;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+        text-transform: capitalize;
+    }
+
+    img {
+        display: inline-block;
+        object-fit: cover;
+        height: 11rem;
+        width: 11rem;
+    }
+}

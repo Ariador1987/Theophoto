@@ -37,24 +37,24 @@
                 <nav class="navigation__nav">
                     <ul class="navigation__list">
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Home</a>
+                            <a href="#home" class="navigation__link">Home</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">About</a>
+                            <a href="#about" class="navigation__link">About</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Blog</a>
+                            <a href="#clientsServices" class="navigation__link">Clients</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Gallery</a>
+                            <a href="#gallery" class="navigation__link">Gallery</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Contact</a>
+                            <a href="#contact" class="navigation__link">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <header class="hero">
+            <header class="hero" id="home">
                 <img src="./src/img/logo.png" alt="logo" class="hero__logo" />
                 <h1 class="hero__heading">
                     The right choice for <br />
@@ -71,7 +71,7 @@
                 </h1>
             </header>
             <main>
-                <section class="about">
+                <section class="about" id="about">
                     <h2 class="section-heading">About</h2>
                     <div class="line line--primary">&nbsp;</div>
                     <article class="about__content">
@@ -236,7 +236,7 @@
                         </p>
                     </article>
                 </section>
-                <section class="contact">
+                <section class="contact" id="contact">
                     <h6 class="contact__slogan">
                         Let&#39;s Make some memories together!
                     </h6>
@@ -265,6 +265,11 @@
                     </ul>
                 </section>
             </main>
+            <footer class="footer">
+                <p class="footer__para">Copyright&nbsp;&copy;&nbsp;<span id="footerYear" class="footer__para--span">2021</span>&nbsp;2B Productions
+                </p>
+                <img src="./src/img/logoBoja.svg" alt="2B Productions logo">
+            </footer>
         </div>
     </body>
 </html>
