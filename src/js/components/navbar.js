@@ -12,7 +12,7 @@ navLinksEl.forEach((link) => {
         e.preventDefault();
         if (checkboxEl.checked) checkboxEl.checked = false;
 
-        // get section to scroll to.
+        // get section ID to scroll to from href attr of link
         const selected = link.getAttribute("href");
         // remove the leading # we're left with id of the section we want ot scroll to
         const cleanSelectedLink = selected.slice(1, selected.length);

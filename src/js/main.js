@@ -16,7 +16,7 @@ const footerYear = document.getElementById("footerYear");
 const date = new Date();
 footerYear.textContent = `${date.getFullYear()}`;
 
-const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
+// const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
 // linkEntireGalleryEl.addEventListener("click", (e) => {
 //     e.preventDefault();
 //     const clicked = e.target.closest(".btn--gallery");

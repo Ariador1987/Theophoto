@@ -249,6 +249,7 @@ section {
   color: var(--clr-primary);
   box-shadow: 0px 0px 12px 4px var(--clr-grey-dark-2);
   transition: all 0.3s;
+  backface-visibility: hidden;
 }
 .icon-container--small:hover {
   transform: translateY(-3px) scale(1.1);

@@ -474,7 +474,7 @@ const btnGoToClientsEl = document.getElementById("clientsBtn");
 const footerYear = document.getElementById("footerYear");
 const date = new Date();
 footerYear.textContent = `${date.getFullYear()}`;
-const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
+// const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
 // linkEntireGalleryEl.addEventListener("click", (e) => {
 //     e.preventDefault();
 //     const clicked = e.target.closest(".btn--gallery");
@@ -534,7 +534,7 @@ navLinksEl.forEach((link)=>{
     link.addEventListener("click", (e)=>{
         e.preventDefault();
         if (checkboxEl.checked) checkboxEl.checked = false;
-        // get section to scroll to.
+        // get section ID to scroll to from href attr of link
         const selected = link.getAttribute("href");
         // remove the leading # we're left with id of the section we want ot scroll to
         const cleanSelectedLink = selected.slice(1, selected.length);
