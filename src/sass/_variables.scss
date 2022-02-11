@@ -29,8 +29,8 @@
     // --clr-gradient-1: hsl(205, 63%, 52%);
     // --clr-gradient-2: hsl(205, 63%, 52%);
 
-    --clr-gradient-1: hsl(0, 0%, 28%);
-    --clr-gradient-2: hsl(0, 0%, 28%);
+    --clr-gradient-1: var(--clr-secondary-light);
+    --clr-gradient-2: var(--clr-secondary-light);
 
     --website-width: 120rem;
 

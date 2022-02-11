@@ -19,8 +19,8 @@
   --clr-grey-dark-2: hsl(0, 0%, 60%);
   --clr-grey-dark-3: hsl(0, 0%, 20%);
   --clr-grey-dark-4: hsl(0, 0%, 5%);
-  --clr-gradient-1: hsl(0, 0%, 28%);
-  --clr-gradient-2: hsl(0, 0%, 28%);
+  --clr-gradient-1: var(--clr-secondary-light);
+  --clr-gradient-2: var(--clr-secondary-light);
   --website-width: 120rem;
   --ff-header: "Montserrat", sans-serif;
   --ff-body: "Merriweather Sans", sans-serif;
@@ -942,6 +942,9 @@ p {
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
+}
+.contact__social i {
+  backface-visibility: hidden;
 }
 .footer {
   width: 100%;

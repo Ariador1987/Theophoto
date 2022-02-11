@@ -22,6 +22,10 @@
         max-width: 80rem;
         margin: 0 auto;
 
+        i {
+            backface-visibility: hidden;
+        }
+
         // span {
         //     transition: 0.8s ease;
 
