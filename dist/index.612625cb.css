@@ -140,7 +140,7 @@ section {
 }
 .btn--link {
   display: inline-block;
-  color: var(--clr-secondary);
+  color: var(--clr-accent);
   text-align: center;
   padding-bottom: 0.75rem;
   width: 3.5rem;
@@ -597,6 +597,8 @@ p {
   padding: 1.5rem 2.25rem;
   border-radius: 12px;
   box-shadow: 4px 4px 10px 6px var(--clr-grey-light-4);
+  height: auto;
+  width: auto;
 }
 @media only screen and (max-width: 75em) {
   .clients-services__images img {

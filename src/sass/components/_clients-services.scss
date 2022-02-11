@@ -20,6 +20,8 @@
             padding: 1.5rem 2.25rem;
             border-radius: 12px;
             box-shadow: 4px 4px 10px 6px var(--clr-grey-light-4);
+            height: auto;
+            width: auto;
 
             @include respond(tab-land) {
                 padding: 2.5rem 3.25rem;
