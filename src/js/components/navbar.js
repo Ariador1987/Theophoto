@@ -1,9 +1,3 @@
-// const toggleBtn = document.querySelector(".main-nav__hamburger");
-// const mainNavEl = document.querySelector(".main-nav");
-// toggleBtn.addEventListener("click", () => {
-//     mainNavEl.classList.toggle("show");
-// });
-
 const checkboxEl = document.getElementById("navi-toggle");
 const navLinksEl = document.querySelectorAll(".navigation__link");
 

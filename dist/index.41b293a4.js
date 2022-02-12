@@ -523,11 +523,6 @@ btnAboutEl.addEventListener("click", ()=>{
 document.addEventListener("DOMContentLoaded", init);
 
 },{"./components/navbar.js":"iKOvc","./components/counter.js":"A1CWI","./components/slider.js":"k1Pry","./components/typewriter.js":"418nu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"iKOvc":[function(require,module,exports) {
-// const toggleBtn = document.querySelector(".main-nav__hamburger");
-// const mainNavEl = document.querySelector(".main-nav");
-// toggleBtn.addEventListener("click", () => {
-//     mainNavEl.classList.toggle("show");
-// });
 const checkboxEl = document.getElementById("navi-toggle");
 const navLinksEl = document.querySelectorAll(".navigation__link");
 navLinksEl.forEach((link)=>{
