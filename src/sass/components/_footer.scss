@@ -7,6 +7,33 @@
     @include flexCenter;
     flex-direction: column;
 
+    &__slogan {
+        margin-top: 3rem;
+        width: 100%;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 3.8rem;
+        font-weight: 300;
+        letter-spacing: 1.1px;
+        color: var(--clr-primary);
+        margin-bottom: 4rem;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-bottom: 3.5rem;
+
+        i {
+            backface-visibility: hidden;
+            margin: 0 2.25rem;
+        }
+    }
+
     &__para {
         font-size: 1.6rem;
         letter-spacing: 1px;
