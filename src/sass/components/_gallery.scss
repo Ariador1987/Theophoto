@@ -63,6 +63,8 @@
         top: 50%;
         z-index: 10;
 
+        @include flexCenter;
+
         border: none;
         background: var(--clr-grey-light-2);
         opacity: 0.6;
