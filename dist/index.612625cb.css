@@ -847,8 +847,8 @@ p {
   }
 }
 .blog {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("blogBackground.d7fd0e7f.jpg");
-  background-position: 100% 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("teoBlogBG.0ab0658f.jpg");
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -981,13 +981,62 @@ p {
   width: 11rem;
 }
 .gallery-full {
-  height: 100vh;
   background-color: var(--clr-grey-light-3);
   padding: 6rem 4rem;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 5vw);
   grid-auto-rows: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .gallery-full {
+    grid-template-columns: auto;
+    grid-template-rows: 300px;
+  }
+}
+.gallery-full__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery-full__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.item--tall {
+  grid-row: span 2;
+}
+@media only screen and (max-width: 37.5em) {
+  .item--tall {
+    grid-row: 1 span 1;
+  }
+}
+.item--wide {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 37.5em) {
+  .item--wide {
+    grid-column: 1 span 1;
+  }
+}
+.item--xl-tall {
+  grid-row: span 3;
+}
+@media only screen and (max-width: 37.5em) {
+  .item--xl-tall {
+    grid-row: 1 span 1;
+  }
+}
+.item--xl-wide {
+  grid-column: span 3;
+}
+@media only screen and (max-width: 37.5em) {
+  .item--xl-wide {
+    grid-column: 1 span 1;
+  }
 }
 /*# sourceMappingURL=index.612625cb.css.map */
