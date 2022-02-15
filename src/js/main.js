@@ -16,23 +16,6 @@ const footerYear = document.getElementById("footerYear");
 const date = new Date();
 footerYear.textContent = `${date.getFullYear()}`;
 
-// const linkEntireGalleryEl = document.querySelector(".btn--gallery-link");
-// linkEntireGalleryEl.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const clicked = e.target.closest(".btn--gallery");
-//     if (!clicked) return;
-
-//     console.log(clicked);
-// });
-
-// Mislim da je ovo dobar pristup
-// linkEntireGalleryEl.closest(".btn--gallery").addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const link = linkEntireGalleryEl.href;
-//     window.location = link;
-//     window.location.reload();
-// });
-
 btnGoToClientsEl.addEventListener("click", (e) => {
     e.preventDefault();
     clientsSectionEl.scrollIntoView({ behavior: "smooth" });
