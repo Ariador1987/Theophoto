@@ -27,35 +27,39 @@
         transition: transform 1s;
 
         > img {
-            width: 100%;
-            height: 100%;
+            width: inherit;
+            height: inherit;
             object-fit: cover;
             transition: all 0.4s;
+
+            &:nth-child(4) {
+                object-fit: contain;
+            }
 
             &:hover,
             &:focus {
                 transform: scale(1.02);
-                filter: saturate(125%);
+                // filter: saturate(125%);
 
-                ~ .slide__figcaption {
-                    opacity: 0;
-                    visibility: hidden;
-                }
+                // ~ .slide__figcaption {
+                //     opacity: 0;
+                //     visibility: hidden;
+                // }
             }
         }
 
-        &__figcaption {
-            font-size: 1.4rem;
-            font-weight: 600;
-            font-style: italic;
-            color: #fff;
-            position: absolute;
-            top: 6%;
-            letter-spacing: 1.5px;
-            visibility: visible;
-            opacity: 1;
-            transition: 1.1s ease;
-        }
+        // &__figcaption {
+        //     font-size: 1.4rem;
+        //     font-weight: 600;
+        //     font-style: italic;
+        //     color: #fff;
+        //     position: absolute;
+        //     top: 6%;
+        //     letter-spacing: 1.5px;
+        //     visibility: visible;
+        //     opacity: 1;
+        //     transition: 1.1s ease;
+        // }
     }
 
     &__btn {

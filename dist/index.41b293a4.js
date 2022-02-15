@@ -530,7 +530,9 @@ navLinksEl.forEach((link)=>{
         e.preventDefault();
         if (checkboxEl.checked) checkboxEl.checked = false;
         // get section ID to scroll to from href attr of link
-        const selected = link.getAttribute("href");
+        let selected = link.getAttribute("href");
+        // all paths lead to Rome
+        if (window.location.href.includes("/gallery.html")) window.location.href = "/" + selected;
         // remove the leading # we're left with id of the section we want ot scroll to
         const cleanSelectedLink = selected.slice(1, selected.length);
         // scrolling the selected link into view
@@ -556,6 +558,7 @@ const obsOptions = {
     threshold: 0.45
 };
 const observer1 = new IntersectionObserver(obsCb, obsOptions);
+if (!counterEl) return;
 observer1.observe(counterEl);
 const startCounting = ()=>{
     counters.forEach((counter)=>{

@@ -30,5 +30,27 @@
         span {
             color: var(--clr-primary);
         }
+
+        &--inner {
+            color: var(--clr-primary);
+            font-weight: 300;
+            font-size: 5.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+
+    &--inner {
+        padding: 2.5rem;
+        height: 15vh;
+        background-image: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2)),
+            url("../img/cameraResized.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--website-width);
     }
 }

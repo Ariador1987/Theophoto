@@ -1,0 +1,12 @@
+.gallery-full {
+    height: 100vh;
+    background-color: var(--clr-grey-light-3);
+
+    padding: 6rem 4rem;
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+}

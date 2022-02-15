@@ -7,7 +7,12 @@ navLinksEl.forEach((link) => {
         if (checkboxEl.checked) checkboxEl.checked = false;
 
         // get section ID to scroll to from href attr of link
-        const selected = link.getAttribute("href");
+        let selected = link.getAttribute("href");
+        // all paths lead to Rome
+        if (window.location.href.includes("/gallery.html")) {
+            window.location.href = "/" + selected;
+        }
+
         // remove the leading # we're left with id of the section we want ot scroll to
         const cleanSelectedLink = selected.slice(1, selected.length);
 

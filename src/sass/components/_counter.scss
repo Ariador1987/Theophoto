@@ -15,10 +15,8 @@
 
     &__item {
         border-radius: 50%;
-        display: flex;
+        @include flexCenter;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 2.25rem 3rem;
 
         @include respond(tab-land) {

@@ -15,6 +15,7 @@ const obsOptions = {
 };
 
 const observer = new IntersectionObserver(obsCb, obsOptions);
+if (!counterEl) return;
 observer.observe(counterEl);
 
 const startCounting = () => {
