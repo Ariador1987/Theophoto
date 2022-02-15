@@ -993,6 +993,7 @@ p {
   .gallery-full {
     grid-template-columns: auto;
     grid-template-rows: 300px;
+    padding: 3rem 2rem;
   }
 }
 .gallery-full__item {

@@ -13,6 +13,7 @@
     @include respond(phone) {
         grid-template-columns: auto;
         grid-template-rows: 300px;
+        padding: 3rem 2rem;
     }
 
     &__item {
