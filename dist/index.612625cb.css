@@ -1002,6 +1002,11 @@ p {
   border-radius: 8px;
   overflow: hidden;
 }
+@media only screen and (max-width: 37.5em) {
+  .gallery-full__item {
+    min-height: 358px;
+  }
+}
 .gallery-full__img {
   height: 100%;
   width: 100%;

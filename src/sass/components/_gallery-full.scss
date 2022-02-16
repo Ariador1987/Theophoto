@@ -21,6 +21,10 @@
         height: 100%;
         border-radius: 8px;
         overflow: hidden;
+
+        @include respond(phone) {
+            min-height: 358px;
+        }
     }
 
     &__img {
