@@ -589,7 +589,7 @@ const previousSlide = ()=>{
 };
 const createDots = ()=>{
     slides.forEach((_, idx)=>{
-        dotsContainerEl.insertAdjacentHTML("beforeend", `<button class="dots__dot" data-slide="${idx}"></button>`);
+        dotsContainerEl.insertAdjacentHTML("beforeend", `<button class="dots__dot" data-slide="${idx}" aria-label="slider dot"></button>`);
     });
 };
 const updateActiveDot = (currentSlide)=>{
