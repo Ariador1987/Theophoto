@@ -1,0 +1,50 @@
+.icon-container {
+    &--svg {
+        height: 2.25rem;
+        width: 2.25rem;
+        @include flexCenter;
+        margin-right: 2px;
+
+        @include respond(phone) {
+            height: 3.2rem;
+            width: 3.2rem;
+        }
+    }
+
+    &--stars {
+        @include flexCenter;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__icon {
+        &--white {
+            fill: #fff;
+        }
+
+        &--accent {
+            fill: var(--clr-accent);
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        &--primary {
+            fill: var(--clr-primary);
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
+        &--counter {
+            fill: var(--clr-primary);
+            width: 6rem;
+            height: 6rem;
+        }
+
+        &--footer {
+            fill: var(--clr-primary);
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}
