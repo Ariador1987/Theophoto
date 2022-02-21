@@ -565,9 +565,10 @@ const startCounting = ()=>{
 
 },{}],"k1Pry":[function(require,module,exports) {
 const slides = document.querySelectorAll(".slide");
-btnLeftEl = document.querySelector(".slider__btn--left");
-btnRightEl = document.querySelector(".slider__btn--right");
-let currentSlide = 0;
+const btnLeftEl = document.querySelector(".slider__btn--left");
+const btnRightEl = document.querySelector(".slider__btn--right");
+const dotsContainerEl = document.querySelector(".dots");
+let currentSlide1 = 0;
 const maxSlide = slides.length;
 const goToSlide = (currSlide)=>{
     slides.forEach((slide, idx)=>{
@@ -575,18 +576,41 @@ const goToSlide = (currSlide)=>{
     });
 };
 const nextSlide = ()=>{
-    if (currentSlide === maxSlide - 1) currentSlide = 0;
-    else currentSlide++;
-    goToSlide(currentSlide);
+    if (currentSlide1 === maxSlide - 1) currentSlide1 = 0;
+    else currentSlide1++;
+    goToSlide(currentSlide1);
+    updateActiveDot(currentSlide1);
 };
 const previousSlide = ()=>{
-    currentSlide--;
-    if (currentSlide < 0) currentSlide = maxSlide - 1;
-    goToSlide(currentSlide);
+    currentSlide1--;
+    if (currentSlide1 < 0) currentSlide1 = maxSlide - 1;
+    goToSlide(currentSlide1);
+    updateActiveDot(currentSlide1);
+};
+const createDots = ()=>{
+    slides.forEach((_, idx)=>{
+        dotsContainerEl.insertAdjacentHTML("beforeend", `<button class="dots__dot" data-slide="${idx}"></button>`);
+    });
+};
+const updateActiveDot = (currentSlide)=>{
+    const dots = document.querySelectorAll(".dots__dot");
+    dots.forEach((dot)=>{
+        dot.classList.remove("dots__dot--active");
+    });
+    document.querySelector(`.dots__dot[data-slide="${currentSlide}"]`).classList.add("dots__dot--active");
 };
 btnRightEl.addEventListener("click", nextSlide);
 btnLeftEl.addEventListener("click", previousSlide);
+dotsContainerEl.addEventListener("click", (e)=>{
+    if (e.target.classList.contains("dots__dot")) {
+        const { slide  } = e.target.dataset;
+        goToSlide(slide);
+        updateActiveDot(slide);
+    }
+});
 goToSlide(0);
+createDots();
+updateActiveDot(0);
 
 },{}],"418nu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
