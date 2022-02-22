@@ -1,8 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap";
 :root {
-  --clr-primary: #ffb900;
-  --clr-primary-dark: #ff7730;
+  --clr-primary: hsl(44, 100%, 50%);
+  --clr-primary-dark: hsl(21, 100%, 59%);
   --clr-secondary: hsl(209, 63%, 75%);
   --clr-secondary-light: hsl(209, 84%, 56%);
   --clr-secondary-dark: #5643fa;
@@ -921,12 +921,15 @@ p {
   }
 }
 .blog {
+  position: static;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("teoBlogBG.0ab0658f.jpg");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .blog .news {
   padding: 2.5rem 2.75rem 2rem;
