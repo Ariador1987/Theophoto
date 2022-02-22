@@ -326,6 +326,8 @@ p {
 }
 .icon-container__icon--white {
   fill: #fff;
+  height: 3.2rem;
+  width: 3.2rem;
 }
 .icon-container__icon--accent {
   fill: var(--clr-accent);
