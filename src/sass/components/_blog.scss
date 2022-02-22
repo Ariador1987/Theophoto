@@ -9,10 +9,7 @@
     color: #fff;
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-
-    @include respond(phone) {
-        background-attachment: scroll;
-    }
+    backface-visibility: hidden;
 
     .news {
         padding: 2.5rem 2.75rem 2rem;
