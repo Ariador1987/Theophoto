@@ -10,6 +10,10 @@
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
 
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+
     .news {
         padding: 2.5rem 2.75rem 2rem;
         margin: 0 auto 4.5rem;

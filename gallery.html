@@ -217,11 +217,16 @@
                     Copyright&nbsp;&copy;&nbsp;<span
                         id="footerYear"
                         class="footer__para--span"
-                        >2022</span
+                        >2021</span
                     >&nbsp;2B Productions
                 </p>
                 <img src="./src/img/logoBoja.svg" alt="2B Productions logo" />
             </footer>
         </div>
     </body>
+    <script>
+        const footerYearEl = document.getElementById("footerYear");
+        const date = new Date();
+        footerYearEl.textContent = `${date.getFullYear()}`;
+    </script>
 </html>
