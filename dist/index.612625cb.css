@@ -931,6 +931,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  width: 100%;
   transform: translateZ(0);
   -moz-transform: translatez(0);
   -ms-transform: translatez(0);
