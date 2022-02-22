@@ -12,6 +12,11 @@ body {
     }
 }
 
+// using position static only to try to resolve the twiching on blog
+main {
+    position: static;
+}
+
 a {
     &,
     &:link,

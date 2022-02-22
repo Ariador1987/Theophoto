@@ -37,6 +37,9 @@ body {
     font-size: 2rem;
   }
 }
+main {
+  position: static;
+}
 a, a:link, a:visited {
   text-decoration: none;
 }
