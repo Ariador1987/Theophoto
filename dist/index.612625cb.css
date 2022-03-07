@@ -540,10 +540,10 @@ p {
 .hero__logo {
   position: absolute;
   height: 8rem;
-  width: 16rem;
+  width: 6rem;
   display: block;
   object-fit: cover;
-  top: 3.5rem;
+  top: 2rem;
   left: 3.5rem;
 }
 .hero__heading {
