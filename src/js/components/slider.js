@@ -54,7 +54,7 @@ const updateActiveDot = (currentSlide) => {
         .classList.add("dots__dot--active");
 };
 
-interval = setInterval(nextSlide, 1500);
+interval = setInterval(nextSlide, 2250);
 
 slider.addEventListener("mouseover", () => {
     clearInterval(interval);
