@@ -2,9 +2,11 @@ const slides = document.querySelectorAll(".slide");
 const btnLeftEl = document.querySelector(".slider__btn--left");
 const btnRightEl = document.querySelector(".slider__btn--right");
 const dotsContainerEl = document.querySelector(".dots");
+const slider = document.querySelector(".slider");
 
 let currentSlide = 0;
 const maxSlide = slides.length;
+let interval;
 
 const goToSlide = (currSlide) => {
     slides.forEach((slide, idx) => {
@@ -52,6 +54,14 @@ const updateActiveDot = (currentSlide) => {
         .classList.add("dots__dot--active");
 };
 
+interval = setInterval(nextSlide, 1500);
+
+slider.addEventListener("mouseover", () => {
+    clearInterval(interval);
+});
+slider.addEventListener("mouseleave", () => {
+    interval = setInterval(nextSlide, 1500);
+});
 btnRightEl.addEventListener("click", nextSlide);
 btnLeftEl.addEventListener("click", previousSlide);
 dotsContainerEl.addEventListener("click", (e) => {
