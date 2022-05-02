@@ -60,12 +60,13 @@ slider.addEventListener("mouseover", () => {
     clearInterval(interval);
 });
 slider.addEventListener("mouseleave", () => {
-    interval = setInterval(nextSlide, 1500);
+    interval = setInterval(nextSlide, 2250);
 });
 btnRightEl.addEventListener("click", nextSlide);
 btnLeftEl.addEventListener("click", previousSlide);
 dotsContainerEl.addEventListener("click", (e) => {
     if (e.target.classList.contains("dots__dot")) {
+        // ovdje se dešava bug zbog točaka, riješit...
         const { slide } = e.target.dataset;
         goToSlide(slide);
         updateActiveDot(slide);
