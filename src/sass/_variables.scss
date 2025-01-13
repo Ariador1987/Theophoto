@@ -26,8 +26,8 @@
     // --clr-gradient-1: hsl(205, 63%, 52%);
     // --clr-gradient-2: hsl(205, 63%, 52%);
 
-    --clr-gradient-1: var(--clr-secondary-light);
-    --clr-gradient-2: var(--clr-secondary-light);
+    --clr-gradient-1: var(--clr-grey-light-4);
+    --clr-gradient-2: var(--clr-grey-light-4);
 
     --website-width: 120rem;
 
@@ -36,11 +36,9 @@
 }
 
 $counter-font-family: "Roboto Mono", sans-serif;
-$gradient-primary: linear-gradient(
-    to right bottom,
-    var(--clr-gradient-1),
-    var(--clr-gradient-2)
-);
+$gradient-primary: linear-gradient(to right bottom,
+        var(--clr-gradient-1),
+        var(--clr-gradient-2));
 $gradient-cta: linear-gradient(to right, #684012, #5a3306);
 $bxsh-dark: 2px 2px 4px 2px var(--clr-box-sh-dark);
 $bxsh-dark-hover: 3px 3px 6px 3px var(--clr-box-sh-dark);
